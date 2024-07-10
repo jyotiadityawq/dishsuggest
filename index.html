@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ideas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FOOD IDEAS !</h1>
+        <form id="foodForm">
+            <div class="form-group">
+                <label for="country">Select Country :-</label>
+                <select id="country" name="country">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="foodType">Select Food Type :-</label>
+                <select id="foodType" name="foodType">
+                    <option value="continental">Continental</option>
+                    <option value="snacks">Snacks</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time">Select Time :-</label>
+                <select id="time" name="time">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch">Lunch</option>
+                    
+                </select>
+            </div>
+            <button type="button" onclick="generateIdeas()">Generate Ideas !</button>
+        </form>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="ideas"></div>
+            <button onclick="printPopup()">Print</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
